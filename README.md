@@ -24,7 +24,7 @@ This Python application allows you to colorize grayscale images and videos using
 
     ```bash
     git clone https://github.com/mydemon21/image_and_video_corolization.git
-    cd your-repo
+    cd image_and_video_corolization
     ```
 
 2. **Install dependencies**:
@@ -44,13 +44,11 @@ This Python application allows you to colorize grayscale images and videos using
 
 3. **Prepare the model files**:
 
-    Ensure you have the model files in the `model` directory. The following files are required:
-    
-    - `colorization_deploy_v2.prototxt`
-    - `colorization_release_v2.caffemodel`
-    - `pts_in_hull.npy`
+    Ensure you have the following files in the `model` directory:
 
-    Place these files in the `model` directory as specified in the script.
+    - `colorization_deploy_v2.prototxt`
+    - `pts_in_hull.npy`
+    - `colorization_release_v2.caffemodel` (This file is not included in the repository. Download it from [this Dropbox link](https://www.dropbox.com/s/dx0qvhhp5hbcx7z/colorization_release_v2.caffemodel?dl=1) and place it in the `model` directory.)
 
 ## Model Description
 
@@ -58,7 +56,7 @@ The application uses a pre-trained deep learning model for colorizing grayscale 
 
 1. **Model Files**:
     - **`colorization_deploy_v2.prototxt`**: This is the network architecture configuration file in Caffe's prototxt format. It defines the layers and operations of the neural network.
-    - **`colorization_release_v2.caffemodel`**: This file contains the pre-trained weights for the model, which were learned during the training phase.
+    - **`colorization_release_v2.caffemodel`**: This file contains the pre-trained weights for the model, which were learned during the training phase. Download this file from [this Dropbox link](https://www.dropbox.com/s/dx0qvhhp5hbcx7z/colorization_release_v2.caffemodel?dl=1).
     - **`pts_in_hull.npy`**: This file contains the colorization points that help the model map grayscale images to their corresponding colors.
 
 2. **Colorization Process**:
